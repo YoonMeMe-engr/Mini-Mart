@@ -24,14 +24,14 @@
 
         function nml(fruit, quantity) {
             let cal = fruits[fruit] * quantity;
-            let total = cal + " Ks";
+            let Total = cal + " Ks";
             record[index] = {
-                name: fruit,
-                price: fruits[fruit] + " Ks",
-                quantity: quantity, //quantity, လို့ ရေးလဲရ Key နဲ့ Value နဲ့တူနေလို့
-                total: total, //total, လို့ ရေးလဲရ Key နဲ့ Value နဲ့တူနေလို့
-                disPar: disPar + "%",
-                total: cal - discount(cal, disPar) + ' Ks',
+                Name: fruit,
+                Price: fruits[fruit] + " Ks",
+                Quantity: quantity, //quantity, လို့ ရေးလဲရ Key နဲ့ Value နဲ့တူနေလို့
+                Total: Total, //total, လို့ ရေးလဲရ Key နဲ့ Value နဲ့တူနေလို့
+                Discount: disPar + "%",
+                DisTotalPrice: cal - discount(cal, disPar) + ' Ks',
             };
             index++;
             return console.table(record);
