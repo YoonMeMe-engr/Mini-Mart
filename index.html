@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Mark</title>
+</head>
+<body>
+    <script>
+
+        let record = [];
+        let index = 0;
+
+        let fruits = {
+            apple: 100,
+            mango: 200,
+            banana:300,
+        };
+
+        let disPar = 3;
+        function discount (amount, discountparcentage) {
+            return (amount * discountparcentage) / 100;
+        }
+
+        function nml(fruit, quantity) {
+            let cal = fruits[fruit] * quantity;
+            let total = cal + " Ks";
+            record[index] = {
+                name: fruit,
+                price: fruits[fruit] + " Ks",
+                quantity: quantity, //quantity, လို့ ရေးလဲရ Key နဲ့ Value နဲ့တူနေလို့
+                total: total, //total, လို့ ရေးလဲရ Key နဲ့ Value နဲ့တူနေလို့
+                disPar: disPar + "%",
+                total: cal - discount(cal, disPar) + ' Ks',
+            };
+            index++;
+            return console.table(record);
+        };
+    </script>
+</body>
+</html>
